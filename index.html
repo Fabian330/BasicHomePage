@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Basic Home Page</title>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo"><img src="images/logo.png"></a>
+
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <i class='bx bx-menu'></i>
+        </label>
+
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="navLinks">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <i class='bx bx-x'></i>
+            </label>
+            
+            <a href="#">HOME</a>
+            <a href="#">FEATURES</a>
+            <a href="#">BLOG</a>
+            <a href="#">ABOUT</a>
+            <a href="#" class="sign-up-side">SIGN UP</a>
+            <a href="#" class="log-in-side">LOGIN</a>
+        </div>
+        <input type="checkbox" id="theme-toggle" hidden>
+        <label for="theme-toggle" class="theme-toggle"></label>
+        <div class="login">
+            <a href="#" class="sign-up">SIGN UP</a>
+            <a href="#" class="log-in">LOGIN</a>
+        </div>
+    </nav>
+    
+    <div class="header">
+        <div class="left">
+            <h1>Title <span>Here</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Excepturi molestias facilis praesentium 
+                magni officiis fuga tenetur placeat asperiores incidunt rem enim 
+                doloremque, iste consequuntur autem ipsa, reprehenderit pariatur natus at!
+            </p>
+            <a href="#">Click Here</a>
+        </div>
+        <img src="images/logo2.png">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

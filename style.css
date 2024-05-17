@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --nav-color: #9e9e9e;
+    --text-color1: #090f13;
+    --text-color2: #ce1e04;
+    --nav-hover: #E5E5E5;
+    --nav-active: #F7FFFD;
+    --sidebar-hover: #CDCDCD;
+    --sidebar-active: #DBDBDB;
+    --body-color: #dddddd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: var(--body-color);
+}
+
+body.dark{
+    --body-color: #2c2c2c;
+    --text-color1: #fff;
+}
+
+nav{
+    display: flex;
+    height: 60px;
+    padding: 0 30px;
+    background: var(--nav-color);
+    align-items: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+nav a img{
+    width: 40px;
+}
+
+.navLinks{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    order: -2;
+}
+
+.navLinks .sign-up-side,
+.navLinks .log-in-side{
+    display: none;
+}
+
+nav .logo{
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    order: -3;
+}
+
+nav a:not(.logo){
+    height: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #090f13;
+}
+
+nav a:hover{
+    color: var(--nav-hover);
+    transition: all 0.1s ease;
+}
+
+nav a:active{
+    color: var(--nav-active);
+}
+
+nav .bx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #090f13;
+    font-size: 32px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#sidebar-active{
+    display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button{
+    display: none;
+}
+
+nav .login{
+    display: flex;
+    padding: 10px 10px;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.login .sign-up{
+    color: white;
+    padding: 5px 0;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: darkgreen;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .sign-up:hover{
+    background-color: lightgreen;
+}
+
+.login .sign-up:active{
+    background-color: darkolivegreen;
+}
+
+.login .log-in{
+    color: white;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: darkblue;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .log-in:hover{
+    background-color: lightblue;
+}
+
+.login .log-in:active{
+    background-color: darkcyan;
+}
+
+.theme-toggle{
+    margin-left: 20px;
+    min-width: 50px;
+    height: 25px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    border-radius: 25px;
+    margin-right: 10px;
+    order: -1;
+}
+
+.theme-toggle::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: calc(25px - 4px);
+    background: #000;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:checked+.theme-toggle::before{
+    left: calc(100% - (25px - 4px) - 2px);
+}
+
+.header{
+    height: calc(100vh - 60px);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .left{
+    width: 700px;
+}
+
+.header .left h1{
+    font-size: 80px;
+    color: var(--text-color1);
+}
+
+.header .left h1 span{
+    color: var(--text-color2);
+}
+
+.header .left p{
+    margin: 30px 0;
+    color: var(--text-color1);
+}
+
+.header .left a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--text-color2);
+    border-radius: 10px;
+    display: flex;
+    width: 200px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.header .left a:hover{
+    background-color: #B91800;
+}
+
+.header .left a:active{
+    background-color: #E21D00;
+}
+
+.header img{
+    width: 500px;
+}
+
+@media screen and (max-width: 1200px){
+    .header .left{
+        width: 400px;
+    }
+
+    .header img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    nav a:not(.logo){
+        font-size: 14px;
+    }
+
+    .header .left{
+        width: 300px;
+    }
+
+    .header .left h1{
+        font-size: 60px;
+    }
+
+    .header .left p{
+        font-size: 14px;
+    }
+
+    .header img{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        height: 60px;
+        background: var(--nav-color);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav .navLinks{
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background: var(--nav-color);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: all 0.5s ease;
+        scrollbar-width: none;
+        overflow-x: hidden;
+    }
+
+    nav .logo{
+        box-sizing: border-box;
+        margin-right: auto;
+        justify-content: flex-start;
+    }
+
+    nav a:not(.logo){
+        color: #090f13;
+        box-sizing: border-box;
+        height: auto;
+        font-size: 16px;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    nav a:hover:not(.logo){
+        color: unset;
+        background: var(--sidebar-hover);
+    }
+    
+    nav .navLinks a:active{
+        color: unset;
+        background: var(--sidebar-active);
+    }
+
+    nav .login{
+        display: none;
+    }
+
+    .navLinks .sign-up-side,
+    .navLinks .log-in-side{
+        display: flex;
+    }
+
+    .navLinks .sign-up-side{
+        margin-top: auto;
+    }
+
+    .header{
+        flex-direction: column-reverse;
+    }
+
+    .header .left{
+        width: 100%;
+    }
+
+    .header .left h1{
+        font-size: 40px;
+    }
+
+    .header .left p{
+        font-size: 14px;
+    }
+
+    .header .left a{
+        margin-bottom: 30px;
+    }
+
+    .header img{
+        width: 200px;
+        margin-top: 30px;
+    }
+    
+    .open-sidebar-button,
+    .close-sidebar-button{
+        margin: 20px;
+        display: block;
+    }
+
+    #sidebar-active:checked ~ .navLinks{
+        right: 0;
+    }
+
+    #sidebar-active:checked ~ #overlay{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}
